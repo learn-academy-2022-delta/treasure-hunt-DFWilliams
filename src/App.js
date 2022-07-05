@@ -13,6 +13,10 @@ class App extends Component {
     return(
       <>
         <h1>Treasure Hunt Game</h1>
+        {this.state.board.map(value => {
+          return <Square/>
+        })}
+        
       </>
     )
   }
