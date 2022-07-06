@@ -10,12 +10,29 @@
     - Added an empty div to square component 
         - styled in css to have a height, width, border
         - imported and called component in App.js
-    Mapped over board array in the state to display Square component for each iteration
-    Added styling on a div that surrounds our mapped squares
-        Used flex and wrap, along with settign width.
-        Centered both gameboard and header
+    - Mapped over board array in the state to display Square component for each iteration
+    - Added styling on a div that surrounds our mapped squares
+        - Used flex and wrap, along with settign width.
+        - Centered both gameboard and header
+    - Passed the value of board to our square component to show question mark
+    - Styled question mark to be larger and centered 
+
+
 - As a user, when I click on one of the question marks an alert appears with the index position of that question mark in the array.
+    - Branch: alert-index
+    - Passed index into square component --> (line 7 in Square.js)
+    - Made an onClick method that alerts user to what index of the box. -->(line 14 in Square.js)
+    - Made a method on App.js to pull the information upstream from our child component. Passed the method down to Square to be invoked when onClick is clicked ---> (line 13-15 in App.js, corresponds to line 5-7 in Square.js, as well as the onClick in line 14 in Square.js)
+
+
+
 - As a user, when I click on one of the question marks instead of the alert the question mark turns into a tree emoji.
+    - Branch: tree-emoji
+    - Destructured board from state so that we could update a single instance to be a tree emoji when clicked ---> (line 15-16 in App.js)
+    - Set state once updated ---> (line 17 in App.js)
+
+
+
 - As a user, if I select the winning square the question mark will become a treasure emoji and if I select the losing square the question mark will become a bomb emoji.
 - As a user, I can click on a “Play Again” button that will restart the game.
 - As a user, I can see a counter that shows how many guesses I have left. The counter starts at 5 and decrements one every time I click on a square that is not the treasure nor the bomb.
