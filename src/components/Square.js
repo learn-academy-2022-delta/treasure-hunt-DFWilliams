@@ -8,7 +8,7 @@ handleClick = () => {
 } 
 
 render() {
-    console.log (this.props.inde)
+    // console.log (this.props.inde)
     return(
       <>
       <div className = 'square' onClick={this.handleClick}>
